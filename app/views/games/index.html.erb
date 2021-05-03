@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Juegos de Mesa de Juan</h1>
+<br>
 
 <table>
   <thead>
@@ -18,9 +19,8 @@
         <td><%= game.desc %></td>
 
         <% game.photos.each do |photo| %>
-          <td><%= image_tag photo.variant(resize: '100x100', monochrome: true)  %></td>
+          <td><%= image_tag photo.variant(size: '1000x1000', monochrome: true) %></td>
         <% end %>
-
 
         <td><%= link_to 'Mostrar el juego', game %></td>
         <td><%= link_to 'Editar el juego', edit_game_path(game) %></td>
